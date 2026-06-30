@@ -53,7 +53,7 @@ The architecture is explicitly designed for **deployment readiness** — the Fas
 
 [YouTube video link] — problem, four-agent architecture, a live end-to-end run hitting all four MCP tools in real time, and the multi-agent trace panel.
 
-[GitHub repo link] — full source, README with architecture diagram, setup instructions, test suite.
+[GitHub Repository](https://github.com/cheerssvp/agro-advisor) — full source, README with architecture diagram, setup instructions, test suite.
 
 ## Limitations & What's Next
 
