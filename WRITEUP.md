@@ -51,7 +51,7 @@ Google ADK (`google-adk`) for agent orchestration and Gemini vision for diagnosi
 The architecture is explicitly designed for **deployment readiness** — the FastAPI backend and ADK orchestrator can be instantly deployed to production using `adk deploy` (to Google Cloud Run) when moving past the hackathon prototype stage.
 ## Demo
 
-[YouTube video link] — problem, four-agent architecture, a live end-to-end run hitting all four MCP tools in real time, and the multi-agent trace panel.
+[YouTube Demo Video](https://youtu.be/ofDpsSGiHAA) — problem, four-agent architecture, a live end-to-end run hitting all four MCP tools in real time, and the multi-agent trace panel.
 
 [GitHub Repository](https://github.com/cheerssvp/agro-advisor) — full source, README with architecture diagram, setup instructions, test suite.
 
