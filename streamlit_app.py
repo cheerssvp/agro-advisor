@@ -246,6 +246,13 @@ if submitted:
                                 st.session_state["advisory"] = payload["advisory"]
                                 st.session_state["advisory_trace"] = payload.get("trace", {})
                                 st.session_state["advisory_language"] = language_label
+                                st.session_state["advisory_inputs"] = {
+                                    "photo_name": photo.name if photo else None,
+                                    "location": location,
+                                    "crop": crop,
+                                    "pincode": pincode,
+                                    "language": language_label
+                                }
                                 st.session_state.pop("advisory_audio", None)
                                 break
                 else:
@@ -257,7 +264,15 @@ if submitted:
                     st.error(f"Request rejected: {detail}")
                     st.session_state.pop("advisory", None)
 
-if st.session_state.get("advisory"):
+current_inputs = {
+    "photo_name": photo.name if photo else None,
+    "location": location,
+    "crop": crop,
+    "pincode": pincode,
+    "language": language_label
+}
+
+if st.session_state.get("advisory") and st.session_state.get("advisory_inputs") == current_inputs:
     st.divider()
     render_advisory(st.session_state["advisory"])
 

@@ -78,7 +78,7 @@ async def stream_advisory(
         app_name=APP_NAME, user_id=user_id, session_id=session_id
     )
 
-    for event in runner.run(user_id=user_id, session_id=session_id, new_message=message):
+    async for event in runner.run_async(user_id=user_id, session_id=session_id, new_message=message):
         if event.author and event.content and event.content.parts:
             text = "".join(p.text or "" for p in event.content.parts)
             if text.strip():
